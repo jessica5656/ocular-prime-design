@@ -1,0 +1,99 @@
+/*-----------------------------------------------------------------
+		Typography
+
+		[colors: 
+		Liquid Luster Silver #93979a
+			Extra Light: #f6fbfe;
+			Light #c3c8cb
+			Dark #65696c
+			Extra Dark: #3b3e41;
+		Diode Blue #005dab
+			Light #538add
+			Dark #00347b
+		Golden Egg #c9ac66
+			Light #fede95
+			Dark #967d39]
+
+-------------------------------------------------------------------*/
+
+html {
+	color: #c3c8cb;
+	background-color: #3b3e41;
+}
+
+body {
+	margin: 0;
+}
+
+main {
+	padding: 1rem;
+}
+
+a {
+	color: #c9ac66;
+	text-decoration: none;
+}
+
+a:visted {
+	color: #538add;
+}
+
+a:hover {
+	color: #00347b;
+}
+
+a:focus {
+	color: #538add;
+	outline: none;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #538add;
+}
+
+/*-----------------------------------------------------------------
+		master page
+-------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------
+		site header components
+-------------------------------------------------------------------*/
+
+header {
+	background-color: #65696c;
+	padding: 2rem;
+}
+
+header ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+header ul li {
+	border-bottom: 1px solid #3b3e41;
+	padding: 1rem 0 1rem;
+}
+
+/*-----------------------------------------------------------------
+		site footer components
+-------------------------------------------------------------------*/
+
+footer {
+	background-color: #65696c; 
+	padding: 1rem;
+}
+
+footer ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+footer ul li {
+	display: inline;
+}
+
+footer a {
+	padding: 1rem;
+}
+
