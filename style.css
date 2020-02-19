@@ -1,68 +1,220 @@
+
+/*-----------------------------------------------------------------
+		variables 
+-------------------------------------------------------------------*/
+
+html {
+
+	/*------
+	border
+	-------*/
+
+	--border-radius-background: .25rem;
+	--border-color-section-seperators: #65696c;
+
+	/*------
+	color
+	-------*/
+
+	--color-silver: #93979a;
+	--color-silver-xlight: #e0e0e0;
+	--color-silver-light: #c3c8cb;
+	--color-silver-dark: #65696c; 
+	--color-silver-xdark: #3b3e41;
+	--color-blue: #005dab;
+	--color-blue-light: #538add;
+	--color-blue-dark: #00347b;
+	--color-gold: #c9ac66;
+	--color-gold-light: #fede95;
+	--color-gold-dark: #967d39;
+
+	/*------
+	font
+	------*/
+
+	--font-primary: 'Lora', 'Helvetica', serif;
+	--font-secondary: 'Montserrat', 'Arial', sans-serif;
+
+
+	/*------
+	line-height
+	------*/
+
+	--ratio-line-height: 1.6;
+
+	--line-height-single: calc( 1rem * var(--ratio-margin) );
+	--line-height-double: calc( var(--line-height-single) * var(--ratio-line-height) );
+
+	/*------
+	margin-scale
+	------*/
+	
+	--ratio-margin: 1.4;
+
+	--margin-single: calc( 2rem * var(--ratio-margin) );
+	--margin-double: calc( var(--margin-single) * var(--ratio-margin) );
+	--margin-triple: calc( var(--margin-double) * var(--ratio-margin) );
+
+	/*------
+	padding-scale
+	------*/
+
+	--ratio-padding: 1.7;
+
+	--padding-single: calc( 2rem * var(--ratio-padding) );
+	--padding-double: calc( var(--ratio-padding-single) * var(--ratio-padding) );
+
+	/*------
+	type-scale
+	------*/
+
+	--ratio-type-scale: 1.2;
+
+	--font-size-one: calc( 1rem * var(--ratio-type-scale) );
+	--font-size-two: calc( var(--font-size-one) * var(--ratio-type-scale) );
+	--font-size-three: calc( var(--font-size-two) * var(--ratio-type-scale) );
+	--font-size-four: calc( var(--font-size-three) * var(--ratio-type-scale) );
+	--font-size-five: calc( var(--font-size-four) * var(--ratio-type-scale) );
+	--font-size-six: calc( var(--font-size-five) * var(--ratio-type-scale) );
+	
+}
+
 /*-----------------------------------------------------------------
 		Typography
-
-		[colors: 
-		Liquid Luster Silver #93979a
-			Extra Light: #f6fbfe;
-			Light #c3c8cb
-			Dark #65696c
-			Extra Dark: #3b3e41;
-		Diode Blue #005dab
-			Light #538add
-			Dark #00347b
-		Golden Egg #c9ac66
-			Light #fede95
-			Dark #967d39]
 
 -------------------------------------------------------------------*/
 
 html {
-	color: #c3c8cb;
-	background-color: #3b3e41;
+	background-color: white;
+	color: var(--color-silver-xdark);
+	font-family: var(--font-primary);
+	font-size: 1rem;
+	line-height: var(--line-height-single);
 }
 
-body {
-	margin: 0;
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-secondary);
 }
 
-main {
-	padding: 1rem;
+h1 {
+	background-color: var(--color-gold);
+	border-radius: var(--border-radius-background);
+	color: white;
+	font-size: var(--font-size-two);
+	line-height: var(--line-height-double);
+	margin: var(--margin-single);
+	padding: .5rem ;
+	text-align: center;
+	
+}
+
+h2 {
+	
+	color: var(--color-silver-dark);
+	font-size: var(--font-size-two);
+	margin-top: var(--margin-double);
+	text-transform: uppercase;
+
+}
+
+h3 {
+	color: var(--color-silver-dark);
+	border-bottom: 1px solid var(--color-silver-light);
+	font-size: var(--font-size-two);
+	
+}
+
+h4 {
+	color: var(--color-silver-dark);
+	font-size: var(--font-size-two);
+	
+}
+
+h5 {
+	color: var(--color-silver-dark);
+	font-size: var(--font-size-two);
+	font-weight: 400;
+	
+}
+
+h6 {
+	color: var(--color-silver-light);
+	font-size: var(--font-size-one);
+	font-weight: 400;
+	text-transform: uppercase;
+	
 }
 
 a {
-	color: #c9ac66;
+	color: var(--color-gold);
+	letter-spacing: .15rem;
 	text-decoration: none;
+	text-transform: uppercase;
 }
 
 a:visted {
-	color: #538add;
+	color: var(--color-blue-light);
 }
 
 a:hover {
-	color: #00347b;
+	color: var(--color-blue-dark);
 }
 
 a:focus {
-	color: #538add;
+	color: var(--color-blue-light);
 	outline: none;
 	text-decoration: underline;
 }
 
 a:active {
-	color: #538add;
+	color: var(--color-blue-light);
+}
+
+.logo {
+	font-size: var(--font-size-three);
+	text-transform: none;
+}
+/*-----------------------------------------------------------------
+		master page layout
+-------------------------------------------------------------------*/
+
+body {
+	font-family: var(--font-primary);
+	line-height: var(--line-height-single);
+	margin:;
+}
+
+main {
+	margin: var(--margin-single) auto;
+	max-width: 35rem;
+}
+
+figure p {
+	margin: 0;
 }
 
 /*-----------------------------------------------------------------
-		master page
+		index page layout
 -------------------------------------------------------------------*/
 
+#index-introduction h2 {
+	border-top: 1px solid var(--border-color-section-seperators);
+	padding-top: 2rem;
+	
+}
+
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
 /*-----------------------------------------------------------------
-		site header components
+		site header component
 -------------------------------------------------------------------*/
 
 header {
-	background-color: #65696c;
-	padding: 2rem;
+	background-color: white;
+	padding: var(--padding-single);
 }
 
 header ul {
@@ -70,18 +222,24 @@ header ul {
 	padding-left: 0;
 }
 
-header ul li {
-	border-bottom: 1px solid #3b3e41;
-	padding: 1rem 0 1rem;
+header li {
+	border-bottom: 1px solid var(--border-color-section-seperators);
+	padding: 1rem 0;
+}
+
+@media ( min-width: 750px ) {
+	header
 }
 
 /*-----------------------------------------------------------------
-		site footer components
+		site footer component
 -------------------------------------------------------------------*/
 
 footer {
-	background-color: #65696c; 
+	background-color: var(--color-silver-xlight); 
+	color: var(--color-silver);
 	padding: 1rem;
+	text-align: center;
 }
 
 footer ul {
@@ -89,11 +247,93 @@ footer ul {
 	padding-left: 0;
 }
 
-footer ul li {
+footer li {
+	color: var(--silver-xlight);
 	display: inline;
 }
 
 footer a {
 	padding: 1rem;
 }
+
+.footer-creation-copyrite {
+	border-bottom: 1px solid var(--border-color-section-seperators);
+}
+
+/*-----------------------------------------------------------------
+		styles page components
+-------------------------------------------------------------------*/
+.color-swatch text {
+	fill: var(--color-silver-dark);
+}
+
+.examples {
+	display: inline;
+	padding: 1rem;
+}
+
+.examples-font-primary {
+	font-family: var(--font-primary);
+	font-size: var(--font-size-two);
+}
+
+.examples-font-secondary {
+	font-family: var(--font-secondary);
+	font-size: var(--font-size-two);
+}
+
+.examples-text-featured {
+	font-family: var(--font-secondary);
+	font-size: var(--font-size-three);
+	font-weight: 400;
+	line-height: var(--line-height-double);
+	margin: var(--margin-double);
+}
+
+.examples-text-body {
+	font-family: var(--font-primary);
+	line-height: var(--line-height-single);
+}
+
+.examples-text-body p {
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;   
+}
+
+.example-quote {
+	font-style: italic;
+	margin: var(--margin-single) var(--margin-single) 0;
+}
+
+.examples-text-block-quote {
+	margin-bottom: var(--margin-single);
+}
+
+.examples-text-tertiary {
+	font-family: var(--font-primary);
+	font-weight: 400;
+}
+
+.examples-text-unordered-list ul {
+	list-style: none;
+
+	padding-left: 0;
+}
+
+.examples-text-ordered-list {
+	margin: 0;
+}
+
+.examples-text-ordered-list li {
+	list-style: lower-roman;
+
+}
+
+
+
+
+
+
+
+
 
