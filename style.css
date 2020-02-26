@@ -70,7 +70,7 @@ html {
 
 	--ratio-type-scale: 1.2;
 
-	--font-size-one: calc( 1rem * var(--ratio-type-scale) );
+	--font-size-one: calc( .75rem * var(--ratio-type-scale) );
 	--font-size-two: calc( var(--font-size-one) * var(--ratio-type-scale) );
 	--font-size-three: calc( var(--font-size-two) * var(--ratio-type-scale) );
 	--font-size-four: calc( var(--font-size-three) * var(--ratio-type-scale) );
@@ -131,7 +131,7 @@ h4 {
 }
 
 h5 {
-	color: var(--color-silver-dark);
+	color: var(--color-silver-light);
 	font-size: var(--font-size-two);
 	font-weight: 400;
 	
@@ -174,6 +174,7 @@ a:active {
 	font-size: var(--font-size-three);
 	text-transform: none;
 }
+
 /*-----------------------------------------------------------------
 		master page layout
 -------------------------------------------------------------------*/
@@ -213,7 +214,6 @@ ul {
 -------------------------------------------------------------------*/
 
 header {
-	background-color: white;
 	padding: var(--padding-single);
 }
 
@@ -329,11 +329,207 @@ footer a {
 
 }
 
+/*-----------------------------------------------------------------
+		Components page 
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+		Button Components
+--------------------------------------------------------------------*/
+
+/*----------------------
+	Button Primary
+----------------------*/
+
+.link-button-primary, .link-button-primary-hover, .link-button-primary-visited, .link-button-primary-active, .link-button-primary:visited, .link-button-primary:hover, .link-button-primary:focus, .link-button-primary-dark, .link-button-primary-dark:visited, .link-button-primary-dark:hover, .link-button-dark:focus, .link-button-primary-light, .link-button-primary-light:visited, .link-button-primary-light:hover, .link-button-primary-light:focus {
+	color: white;
+	background-color: var(--color-blue);
+	border-radius: var(--border-radius-background);
+	box-shadow: .5rem .25rem .5rem rgba( 0, 0, 0, .35 );
+	display: inline-block;
+	font-size: var(--font-size-two);
+	padding: 1.5rem 2rem;
+	margin: var(--margin-single);
+	text-decoration: none;
+}
+
+.primary-button-states figure {
+	align-items: center;
+	display: flex;
+	
+}
+
+.link-button-primary-hover {
+	background-color: var(--color-gold);
+	box-shadow: .5rem .25rem .5rem rgba( 0, 0, 0, .35 );
+	color: var(--color-silver-gold-light);
+	outline: none;
+}
+
+.link-button-primary-visited:hover {
+	color: white;
+}
+
+.link-button-primary-active {
+	color: var(--color-blue);
+	background-color: var(--color-gold-light);
+}
 
 
+.link-button-primary-dark, .link-button-primary-dark:visited {
+	background-color: var(--color-blue-dark);
 
+}
 
+.link-button-primary-light, .link-button-primary-light:visited, .link-button-primary-light:hover, .link-button-light:focus {
+	background-color: var(--color-blue-light);
+}
 
+.link-button-primary:hover, .link-button-primary:focus, .link-button-primary-dark:hover, .link-button-primary-dark:focus, .link-button-primary-light:hover, .link-button-primary-light:focus {
+	background-color: var(--color-gold);
+	box-shadow: .5rem .25rem .5rem rgba( 0, 0, 0, .35 );
+	color: var(--color-silver-gold-light);
+	outline: none;
+}
 
+.link-button-primary-dark:hover, .link-button-primary-dark:focus {
+	background-color: var(--color-gold);
+	
+}
 
+.link-button-primary-light:hover, .link-button-primary-light:focus {
+	background-color: var(--color-gold-light);
+	color: var(--color-silver);
+}
 
+.link-button-primary:active,.link-button-primary-dark:active, .link-button-primary-light:active {
+	background-color: var(--color-gold-light);
+}
+
+/*----------------------
+	Button Secondary
+----------------------*/
+
+.link-button-secondary, .link-button-secondary:visited, .link-button-secondary:hover, .link-button-secondary:focus, .link-button-secondary-dark, .link-button-secondary-dark:visited, .link-button-secondary-dark:hover, .link-button-secondary-dark:focus, .link-button-secondary-light, .link-button-secondary-light:visited, .link-button-secondary-light:hover, .link-button-secondary-light:focus {
+	background-color: white;
+	border: 1px solid var(--color-blue);
+	border-radius: var(--border-radius-background);
+	box-shadow: .5rem .25rem .7rem rgba( 0, 0, 0, .35 );
+	color: var(--color-blue);
+	display: inline-block;
+	font-size: var(--font-size-two);
+	padding: 1rem 1.5rem;
+	margin: var(--margin-single);
+	text-decoration: none;
+	text-transform: none;
+}
+
+.link-button-secondary-dark, .link-button-secondary-dark:visited, .link-button-secondary-dark:hover, .link-button-secondary-dark:focus {
+	border: 1px solid var(--color-blue-dark);
+}
+
+.link-button-secondary-light, .link-button-secondary-light:visited, .link-button-secondary-light:hover, .link-button-secondary-light:focus {
+	border: 1px solid var(--color-blue-light);
+	color: var(--color-blue-light);
+}
+
+.link-button-secondary:hover, .link-button-secondary:focus, .link-button-secondary-dark:hover, .link-button-secondary-dark:focus, .link-button-secondary-light:hover, .link-button-secondary-light:focus {
+	color: white;
+	background-color: var(--color-gold);
+	border: 1px solid transparent;
+	box-shadow: .5rem .25rem .7rem rgba( 0, 0, 0, .35 );
+	outline: none;
+}
+
+.link-button-secondary-dark:hover, .link-button-secondary-dark:focus {
+	color: white;
+	background-color: var(--color-gold-dark);
+	border: 1px solid var(--color-silver);
+}
+
+.link-button-secondary-light:hover, .link-button-secondary-light:focus {
+	color: var(--color-blue-dark);
+	background-color: var(--color-gold-light);
+}
+
+.link-button-secondary:active, .link-button-secondary-dark:active, .link-button-secondary-light:active {
+	background-color: var(--color-silver-gold-light);
+}
+
+/*----------------------
+	Button Tertiary
+----------------------*/
+
+.link-button-tertiary, .link-button-tertiary:visited, .link-button-tertiary:hover, .link-button-tertiary:focus, .link-button-tertiary-dark, .link-button-tertiary-dark:visited, .link-button-tertiary-dark:hover, .link-button-tertiary-dark:focus, .link-button-tertiary-light, .link-button-tertiary-light:visited, .link-button-tertiary-light:hover, .link-button-tertiary-light:focus {
+	background-color: var(--color-silver-light);
+	border-radius: var(--border-radius-background);
+	box-shadow: .5rem .25rem .7rem rgba( 0, 0, 0, .35 );
+	color: white;
+	display: inline-block;
+	font-size: var(--font-size-two);
+	padding: 1rem 1.5rem;
+	margin: var(--margin-single);
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.link-button-tertiary-dark,  .link-button-tertiary-dark:visited, .link-button-tertiary-dark:hover, .link-button-tertiary-dark:focus {
+	background-color: var(--color-silver-dark);
+	color: var(--color-gold);
+}
+
+.link-button-tertiary-light,  .link-button-tertiary-light:visited, .link-button-tertiary-light:hover, .link-button-tertiary-light:focus {
+	background-color: var(--color-silver-xlight);
+	color: var(--color-gold-dark);
+}
+
+.link-button-tertiary:hover, .link-button-tertiary-dark:focus, .link-button-tertiary-dark:hover, .link-button-tertiary-dark:focus, .link-button-tertiary-light:hover, .link-button-tertiary-light:focus {
+	color: var(--color-blue);
+	background-color: var(--color-gold);
+	box-shadow: .5rem .25rem .7rem rgba( 0, 0, 0, .35 );
+	color: var(--color-silver-gold-light);
+	outline: none;
+}
+
+.link-button-tertiary:active {
+	background-color: var(--color-silver-gold-light);
+}
+
+/*------------------------------------------------------------------
+		Accordion Components
+--------------------------------------------------------------------*/
+
+summary {
+	background-color: var(--color-silver-xlight);
+	border-radius: var(--border-radius-background);
+	box-shadow: .5rem .25rem .7rem rgba( 0, 0, 0, .35 );
+	color: var(--color-gold-dark);
+  	cursor: pointer;
+  	font-size: var(--font-size-two);
+  	margin-bottom: .5rem;
+  	padding: .75rem;
+}
+
+summary:focus {
+	background-color: var(--color-gold);
+	color: white;
+	outline: none;
+}
+
+ .details-style {
+  border-left: 3px solid var(--color-gold-dark);
+  border-radius: var(--border-radius-background);
+  font-size: var(--font-size-two);
+  padding: 1rem;
+  margin: .5rem;
+  box-shadow: .5rem .25rem .7rem rgba( 0, 0, 0, .35 );
+}
+
+.details-style p {
+	margin: 1rem;
+}
+
+.details-style ul {
+	list-style: circle;
+	padding-left: 1rem;
+}
