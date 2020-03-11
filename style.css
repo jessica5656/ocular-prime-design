@@ -180,6 +180,7 @@ a:active {
 body {
 	font-family: var(--font-primary);
 	line-height: var(--line-height-single);
+	margin: 0;
 }
 
 main {
@@ -535,7 +536,7 @@ summary:focus {
 --------------------------------------------------------------------*/
 
 dialog {
-	animation: rotate-slide 1s ease-out;
+	animation: rotate-slide 1s ease;
 	border: none;
 	border-top: .5rem solid var(--color-gold);
 	border-radius: var(--border-radius-background);
@@ -558,12 +559,12 @@ dialog p {
 }
 
 dialog::backdrop {
-	animation: opacity-twirl 1s ease-out;
+	animation: transparency-spin .05s ease;
 	background: rgba(201, 172, 102,0.3);
 	background-image: url(img/starry-night-sky.png);
 	background-repeat: no-repeat;
 	background-size: cover;
-	opacity: 0.4;
+	opacity: 0.3;
 }
 
 .modal-link-button {
@@ -582,41 +583,42 @@ dialog::backdrop {
 }
 
 @keyframes rotate-slide {
-	
+
 	0% {
 		opacity: 0;
 		transform: translateX(-10rem) scale(2) rotate(-90deg);
 	} 
-	
+
 	70% {
 		transform: translateX(.75rem) rotate(3deg);
 	}
-	
+
 	100% {
 		opacity: 1;
 		transform: translateX(0) scale(1) rotate(0deg);
 	}
-	
+
 }
 
-@keyframes opacity-twirl {
-	
+@keyframes transparency-spin {
+
 	0% {
 		opacity: 0;
-		transform: translateY(50rem) scale(10);
+		transform: translateY(50rem) scale(10) rotate(-90deg);
 	}
 
 	70% {
 		opacity: .2;
-		transform: rotate(1deg);
+		transform: rotate(3deg);
 	}
-	
+
 	100% {
-		opacity: .4;
-		transform: translateY(0) scale(1);
+		opacity: .3;
+		transform: translateY(0) scale(1) rotate(0deg);
 	}
-	
+
 }
+
 
 /*------------------------------------------------------------------
 		Form Components
