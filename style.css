@@ -637,7 +637,6 @@ form h1 {
 
 label, input, select, textarea {
 	display: block;
-	margin: auto;
 }
 	
 
@@ -647,8 +646,8 @@ label {
 
 [type="text"], [type="address"], [type="email"], textarea, select {
 	box-sizing: border-box;
-	margin: auto;
-	min-width: 15rem;
+	min-width: 15vw;
+	max-width: 45vw;
 	padding: .5rem;
 	width: 100%;
 }
@@ -702,15 +701,15 @@ textarea {
 	min-height: 8rem;
 }
 
-@media ( min-width: 800px ) {
-	
-	[type="text"], [type="address"], [type="email"], textarea, select {
-		max-width: 20rem;
-}
+@media ( min-width: 775px ) {
 
+	[type="text"], [type="address"], [type="email"], textarea, select {
+		min-width: 30vw;
+		max-width: 35vw;
+}
+	
 	textarea {
 		min-height: 20vh;
-		min-width: 20vw;
 }
 
 	form {
