@@ -16,7 +16,7 @@
 <body>
 	<header>
 
-		<a href="" class="logo">Ocular Prime Design</a>
+		<a href="index.html" class="logo">Ocular Prime Design</a>
 
 		<nav>
 			<ul>
@@ -35,7 +35,7 @@
 
 		<h2>Link Buttons</h2>
 
-		<div class="examples-card">
+		<div class="example-card">
 			<h3>Primary Buttons</h3>
 
 			<figure>
@@ -54,7 +54,7 @@
 			</figure>
 		</div>
 
-		<div class="examples-card">
+		<div class="example-card">
 			<h3>Secondary Buttons</h3>
 
 			<figure>
@@ -74,7 +74,7 @@
 
 		</div>
 
-		<div class="examples-card">
+		<div class="example-card">
 			<h3>Tertiary Buttons</h3>
 
 			<figure>
@@ -95,20 +95,22 @@
 
 		<h2>Accordion Components</h2>
 
-		<div class="examples-card">
+		<div class="example-card">
 			<figure>
 				<details>
 					<summary>What to expect</summary>
 
-					<div class="details-style">
-						<p class="body-copy">Beyond Vision is a whole-body, fully immersive experience, with you, your friends and family physically inside the action. Go Beyond the infinity of dimensions moving simultaneously in parallel through your greatest fantasies. It is, in short, everything that has ever been, is or will be. It is everything that could have been, could now be or could ever be in the future. Our modern Ocular Headset blends high-resolution graphics and 3D audio into a cool and comfortable design ready to take you on your next adventure.</p>
+					<div class="details-content">
+						<div class="body-copy">
+							<p>Beyond Vision is a whole-body, fully immersive experience, with you, your friends and family physically inside the action. Go Beyond the infinity of dimensions moving simultaneously in parallel through your greatest fantasies. It is, in short, everything that has ever been, is or will be. It is everything that could have been, could now be or could ever be in the future. Our modern Ocular Headset blends high-resolution graphics and 3D audio into a cool and comfortable design ready to take you on your next adventure.</p>
+						</div>
 					</div>
 				</details>
 
 				<details>
 					<summary>How to prepare</summary>
 
-					<div class="details-style">
+					<div class="details-content">
 						<ul>
 							<li>We recommend all group members arrive 10 minutes early for your scheduled time.</li>
 							<li>We do our best to accommodate late arrivals, but here may be a wait while we work you back into the schedule.</li>
@@ -120,10 +122,12 @@
 				<details>
 					<summary>What Is Beyond Vision</summary>
 
-					<div class="details-style">
-						<p class="body-copy"> Beyond Vision is a platform for building virtual-reality and augmented-reality experiences. We are focused on acquiring and onboarding enterprise-level clients looking for a sleek, high-end, and reliable image.</p>
+					<div class="details-content">
+						<div class="body-copy">
+							<p> Beyond Vision is a platform for building virtual-reality and augmented-reality experiences. We are focused on acquiring and onboarding enterprise-level clients looking for a sleek, high-end, and reliable image.</p>
 
-						<p class="body-copy">Our team is a dynamic group of talented and passionate people with an eagerness to create the most immersive virtual reality experience ever. We ideate solutions and strive to innovate amazing experiences that change the way people view the world. We are critical thinkers, creatives, artists, marketers, problem solvers, and doers. Our vision first approach is taking the virtual-reality experience Beyond.</p>
+							<p>Our team is a dynamic group of talented and passionate people with an eagerness to create the most immersive virtual reality experience ever. We ideate solutions and strive to innovate amazing experiences that change the way people view the world. We are critical thinkers, creatives, artists, marketers, problem solvers, and doers. Our vision first approach is taking the virtual-reality experience Beyond.</p>
+						</div>
 					</div>
 				</details>
 			</figure>
@@ -131,25 +135,165 @@
 		
 		<h2>Modal Dialog Component</h2>
 
-		<div class="examples-card">
+		<div class="example-card">
 			<figure>
-				<div class="modal-container">
-					<button id="open-dialog" type="button">Open Dialog</button>
+				<button id="open-dialog" type="button">Open Dialog</button>
 
-					<dialog id="modal-demo">
+				<dialog id="modal-demo">
 
-						<h2>Default Modal Title</h2>
+					<h2>Default Modal Title</h2>
 
-						<p>This is where the content of the modal will be.</p>
+					<p>This is where the content of the modal will be.</p>
 
-						<div class="modal-link-button">
-						<a href="" class="link-button-primary">Go Beyond</a>
-						</div>
+					<div class="modal-link-button">
+					<a href="" class="link-button-primary">Go Beyond</a>
+					</div>
 
-					</dialog>
-				</div>
+				</dialog>
 			</figure>
 		</div>
+		
+		<h2>Form Input Components</h2>
+
+		<div class="example-card">
+			<h3>Input Fields</h3>
+
+			<figure>
+				<label for="entry-standard">Standard Text Entry</label>
+				<input type="text" id="entry-standard" name="standard">
+				<p class="text-tertiary">Ex: name, business, short notes, ect.</p>
+
+				<lable for="entry-error">Standard Entry- Error</lable>
+				<input type="text" id="entry-error" name="error" class="error">
+				<p class="text-tertiary-error">Oops, something went wrong!</p>
+
+				<lable for="entry-disabled">Standard Entry- Disabled</lable>
+				<input type="text" id="entry-disabled" name="disabled" class="disabled" disabled>
+				<p class="text-tertiary">Currently Unavalible</p>
+				
+			</figure>
+		</div>
+
+		<div class="example-card">
+			<h3>Select Fields</h3>
+
+			<figure>
+				<label for="selection">Standard Select</label>
+				<select id="selection" name="selection">
+					<option diabled hidden selected>Choose an Option</option>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select>
+
+				<label for="selection-error">Error Select</label>
+				<select id="selection-error" name="selection-error" class="selection-error">
+					<option diabled hidden selected>Choose an Option</option>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select>
+				<p class="text-tertiary-error">Oops, something went wrong!</p>
+
+				<label for="selection-disabled">Disabled Select</label>
+				<select id="selection-disbaled" name="selection-disbaled" disabled>
+					<option diabled hidden selected>Currently Unavalible</option>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select>
+
+			</figure>
+		</div>
+
+		<div class="example-card">
+
+			<h3>Text Area</h3>
+
+			<figure>
+				<label for="message">Textarea</label>
+				<p class="text-tertiary">50 word max</p>
+				<textarea id="message" name="message" placeholder="Leave a message..."></textarea>
+				
+			</figure>
+		</div>
+
+		<div class="example-card">
+
+			<h3>Submit Button</h3>
+
+			<figure>
+
+				<input type="submit">
+
+				<p class="text-tertiary">Standard</p>
+
+				<input type="submit" class="submit-light">
+
+				<p class="text-tertiary">Light</p>
+
+				<input type="submit" class="submit-dark">
+
+				<p class="text-tertiary">Dark</p>
+				
+			</figure>
+		</div>
+
+		<div class="example-card">
+
+			<h3>Form</h3>
+
+			<figure>
+				<form action="subfolder/file.js">
+					<div class="grid-1">
+					<h1>Contact</h1>
+					</div>
+					
+					<div class="grid-2">
+						<label for="entry-standard">Name</label>
+						<input type="text" id="entry-standard" name="name">
+						<p class="text-tertiary">First and Last</p>
+					</div>
+
+					<div class="grid-3">
+						<label for="entry-standard">Business Name*</label>
+						<input type="text" id="entry-standard" name="business">
+						<p class="text-tertiary">*Optional</p>
+					</div>
+
+					<div class="grid-4">
+						<label for="user-address">Your Address</label>
+						<input type="address" id="usesr-address" name="address">
+					</div>
+
+					<div class="grid-5">
+						<label for="user-email">Your Email Address</label>
+						<input type="email" id="user-email" name="email" required>
+					</div>
+
+					<div class="grid-6">
+						<label for="selection">Reason For Contact</label>
+						<select id="selection" name="selection">
+							<option diabled hidden selected>Choose an Option</option>
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</div>
+
+					<div class="grid-7">
+						<label for="message">Textarea</label>
+						<p class="text-tertiary">50 word max</p>
+						<textarea id="message" name="message" placeholder="Tell us more..."></textarea>
+					</div>
+
+					<div class="grid-8">
+						<input type="submit">
+					</div>			
+				</form>
+			</figure>
+						
+
 	</main>
 
 	<footer>
