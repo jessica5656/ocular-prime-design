@@ -15,19 +15,21 @@
 
 <body>
 	<header>
+		<div class="feature-wrap">
+			<div class="photo lead">
+				<a href="index.html" class="logo">Ocular Prime Design</a>
 
-		<a href="index.html" class="logo">Ocular Prime Design</a>
 
-
-		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="style.html">Style</a></li>
-				<li><a href="components.html">Components</a></li>
-				<li><a href="layout.html">Layout</a></li>
-			</ul>
-		</nav>
-		
+				<nav class="nav-primary">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="style.html">Style</a></li>
+						<li><a href="components.html">Components</a></li>
+						<li><a href="layout.html">Layout</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 	</header>
 
 	<main>
@@ -240,83 +242,120 @@
 			</figure>
 		</div>
 
+		<h3>Form Example</h3>
+
+		<figure>
+			<form action="subfolder/file.js">
+				<div class="grid-form-1">
+				<h1>Contact</h1>
+				</div>
+				
+				<div class="grid-form-2">
+					<label for="entry-standard">Name</label>
+					<input type="text" id="entry-standard" name="name">
+					<p class="text-tertiary">First and Last</p>
+				</div>
+
+				<div class="grid-form-3">
+					<label for="entry-standard">Business Name*</label>
+					<input type="text" id="entry-standard" name="business">
+					<p class="text-tertiary">*Optional</p>
+				</div>
+
+				<div class="grid-form-4">
+					<label for="user-address">Your Address</label>
+					<input type="address" id="usesr-address" name="address">
+				</div>
+
+				<div class="grid-form-5">
+					<label for="user-email">Your Email Address</label>
+					<input type="email" id="user-email" name="email" required>
+				</div>
+
+				<div class="grid-form-6">
+					<label for="selection">Reason For Contact</label>
+					<select id="selection" name="selection">
+						<option diabled hidden selected>Choose an Option</option>
+						<option>Option 1</option>
+						<option>Option 2</option>
+						<option>Option 3</option>
+					</select>
+				</div>
+
+				<div class="grid-form-7">
+					<label for="message">Textarea</label>
+					<p class="text-tertiary">50 word max</p>
+					<textarea id="message" name="message" placeholder="Tell us more..."></textarea>
+				</div>
+
+				<div class="grid-form-8">
+					<input type="submit">
+				</div>			
+			</form>
+		</figure>
+
+
+		<h2>Navigation Component</h2>
+
 		<div class="example-card">
+			<h3>Primary Navigation</h3>
+				<nav class="nav-primary">
+					<ul>
+						<li>Home</a></li>
+						<li>Style</a></li>
+						<li>Components</a></li>
+						<li>Layout</a></li>
+					</ul>
+		</nav>
+			</div>	
 
-			<h3>Form Example</h3>
+		<div class="example-card">
+			<h3>Secondary Navigation</h3>
+				<nav class="nav-secondary">
 
-			<figure>
-				<form action="subfolder/file.js">
-					<div class="grid-form-1">
-					<h1>Contact</h1>
-					</div>
-					
-					<div class="grid-form-2">
-						<label for="entry-standard">Name</label>
-						<input type="text" id="entry-standard" name="name">
-						<p class="text-tertiary">First and Last</p>
-					</div>
+				<ul>
+					<li>
+						<a href="">Instagram</a>
+					</li>
 
-					<div class="grid-form-3">
-						<label for="entry-standard">Business Name*</label>
-						<input type="text" id="entry-standard" name="business">
-						<p class="text-tertiary">*Optional</p>
-					</div>
+					<li>
+						<a href="">Linked In</a>
+					</li>
 
-					<div class="grid-form-4">
-						<label for="user-address">Your Address</label>
-						<input type="address" id="usesr-address" name="address">
-					</div>
+					<li>
+						<a href="">Facebook</a>
+					</li>
+				</ul>
 
-					<div class="grid-form-5">
-						<label for="user-email">Your Email Address</label>
-						<input type="email" id="user-email" name="email" required>
-					</div>
-
-					<div class="grid-form-6">
-						<label for="selection">Reason For Contact</label>
-						<select id="selection" name="selection">
-							<option diabled hidden selected>Choose an Option</option>
-							<option>Option 1</option>
-							<option>Option 2</option>
-							<option>Option 3</option>
-						</select>
-					</div>
-
-					<div class="grid-form-7">
-						<label for="message">Textarea</label>
-						<p class="text-tertiary">50 word max</p>
-						<textarea id="message" name="message" placeholder="Tell us more..."></textarea>
-					</div>
-
-					<div class="grid-form-8">
-						<input type="submit">
-					</div>			
-				</form>
-			</figure>
-						
+				</nav>
+			</div>	
 
 	</main>
 
 	<footer>
-		<p class="footer-creation-copyrite">Ocular Prime Deisgn&copy;2020</p>
+		<div class="footer-wrap">
+			<div class="photo lead">
+				<p class="footer-creation-copyrite">Ocular Prime Deisgn&copy;2020</p>
 
-		<p>Created by Jess Murray, a local Austin UX design student at ACC.</p>
+				<p>Created by Jess Murray, a local Austin UX design student at ACC.</p>
 
-		<nav>
-			<ul>
-				<li>
-					<a href="https://www.instagram.com/yesika512/">Instagram</a>
-				</li>
+				<nav class="nav-secondary">
+					<ul>
+						<li>
+							<a href="https://www.instagram.com/yesika512/">Instagram</a>
+						</li>
 
-				<li>
-					<a href="https://www.linkedin.com/in/jessica-murray-43775374/">Linked In</a>
-				</li>
+						<li>
+							<a href="https://www.linkedin.com/in/jessica-murray-43775374/">Linked In</a>
+						</li>
 
-				<li>
-					<a href="https://www.facebook.com/jessica.murray.7568">Facebook</a>
-				</li>
-			</ul>
-		</nav>
+						<li>
+							<a href="https://www.facebook.com/jessica.murray.7568">Facebook</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 
 	</footer>
 
