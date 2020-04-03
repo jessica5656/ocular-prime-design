@@ -110,8 +110,6 @@ h1 {
 	color: var(--color-gold-dark);
 	font-size: var(--font-size-three);
 	line-height: var(--line-height-double);
-	max-width: 100%;
-	padding: 1rem;
 	text-align: center;
 	text-shadow: 1px 1px rgba( 0, 0, 0, .15 );
 	
@@ -169,9 +167,8 @@ h6 {
 	font-family: var(--font-secondary);
 	font-size: var(--font-size-two);
 	font-weight: 400;
-	letter-spacing: 3px;
+	letter-spacing: 2px;
 	line-height: var(--line-height-single);
-	max-width: none;
 	padding: 1rem;
 	text-align: center;
 }
@@ -242,10 +239,15 @@ a:active {
 	color: var(--color-blue-light);
 }
 
-.nav-primary .current-page {
-	color: var(--color-gold);
-	text-shadow: 0 0 1px var(--color-gold-xlight), 0 0 2px var(--color-gold-xlight);
-	text-decoration: none;
+
+.logo {
+	margin: .5rem;
+	font-size: var(--font-size-two);
+	/*left: .5rem;
+	position: absolute;
+	top: 1rem;*/
+	text-transform: none;
+	
 }
 
 @media (min-width: 800px) {
@@ -255,7 +257,7 @@ a:active {
 	}
 	
 	h1 {
-		font-size: var(--font-size-five);
+		font-size: var(--font-size-six);
 	}
 
 	blockquote {
@@ -265,37 +267,84 @@ a:active {
 	}
 
 	.text-featured {
-		font-size: var(--font-size-three);
-		letter-spacing: 4px;
+		font-size: var(--font-size-four);
+		letter-spacing: 3px;
 		line-height: 1.5;
+		max-width: 45rem;
 	}
 
-	.nav-primary .current-page {
-	font-size: var(--font-size-three);
-	text-shadow: 0 0 3px var(--color-gold-xlight), 0 0 5px var(--color-gold-xlight);
-	padding: .5rem;
+	.logo {
+		/*left: 1rem;*/
+		font-size: var(--font-size-four);
+		/*top: 1.5rem; */
+	}
+
 }
+
+/*-----------------------------------------------------------------
+		master page layout
+-------------------------------------------------------------------*/
+
+body {
+	font-family: var(--font-primary);
+	line-height: var(--line-height-single);
+	margin: 0 auto;
+}
+
+main {
+	margin: auto;
+}
+
+header {
+	padding-top: 1rem;
+}
+
+.body-copy {
+	font-family: var(--font-primary);
+	line-height: var(--line-height-single);
+	margin: var(--margin-single) auto;
+	max-width: 35rem;
+}
+
+figure {
+	margin: .5rem 1rem;
+}
+
+figcaption {
+	padding: 1rem;
+}
+
+.example-card {
+	background-color: white;
+	border-bottom: 1px solid var(--color-silver);
+	box-shadow: .5rem .25rem .7rem rgba( 0, 0, 0, .35 );
+	margin: 2rem auto;
+	padding: 1rem;
+}
+
+@media (min-width: 800px) {
+	
+	header li {
+		padding: 1rem .5rem;
+	}
+}
+
+@media (min-width: 1050px) {
+	header {
+		align-items: center;
+		display: flex;
+		font-size: var(--font-size-two);
+		justify-content: space-around;
+		padding-top: 0;
+	}
 }
 
 /*-----------------------------------------------------------------
 		Primary Nav components
 -------------------------------------------------------------------*/
 
-.logo {
-	font-size: var(--font-size-three);
-	left: .5rem;
-	position: absolute;
-	top: 1rem;
-	text-transform: none;
-	
-}
-
-.nav-primary {
-	margin: 0;
-	padding: .5rem 0;
-}
-
 .nav-primary a {
+	padding: 1rem 0;
 	text-transform: uppercase;
 }
 
@@ -309,14 +358,16 @@ a:active {
 	padding: 1rem .5rem;
 }
 
-.feature-wrap {
+.feature-wrap .lead {
+	align-items: center;
+	background-image: url(img/logo-img.jpg);
 	border-bottom: var(--color-silver);
 	border-top: var(--color-silver);
-}
-
-.feature-wrap .lead {
-	background-image: url(img/logo-img.jpg);
-	padding: 5% 0 5% 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 100%;
+	min-height: 25vh;	
 }
 
 .feature-wrap .photo {
@@ -326,21 +377,16 @@ a:active {
 	background-size: cover;
 }
 
+.nav-primary .current-page {
+	color: var(--color-gold);
+	text-shadow: 0 0 1px var(--color-gold-xlight), 0 0 2px var(--color-gold-xlight);
+	text-decoration: none;
+}
+
 @media (min-width: 800px) {
 
-	header {
-		font-size: var(--font-size-two);
-		text-align: right;
-	}
-
-	header li {
-		padding: 1rem .5rem;
-	}
-
-	.logo {
-		left: 1rem;
-		font-size: var(--font-size-four);
-		top: 1.5rem; 
+	.feature-wrap .lead {
+		min-height: 100vh;
 	}
 
 	.nav-primary li {
@@ -355,17 +401,15 @@ a:active {
 
 	}
 
-	.feature-wrap .lead {
-		padding: 10% 0 2.5% 0;
+	.nav-primary .current-page {
+	font-size: var(--font-size-three);
+	text-shadow: 0 0 3px var(--color-gold-xlight), 0 0 5px var(--color-gold-xlight);
+	padding: .5rem;
 	}
 
 }
 
 @media (min-width: 1150px) {
-
-	.feature-wrap .lead {
-		padding: 25% 0 0 0;
-	}
 
 	.nav-primary a {
 		font-size: var(--font-size-three);
@@ -448,10 +492,6 @@ footer {
 	
 }
 
-.dropdown-content a:hover {
-	
-}
-
 .dropdown:hover .dropdown-content {
 	display: block;
 }
@@ -460,46 +500,6 @@ footer {
 	background-color: var(--color-gold-light);
 }
 
-/*-----------------------------------------------------------------
-		master page layout
--------------------------------------------------------------------*/
-
-body {
-	font-family: var(--font-primary);
-	line-height: var(--line-height-single);
-	margin: 0 auto;
-}
-
-main {
-	margin: auto;
-}
-
-.body-copy {
-	font-family: var(--font-primary);
-	line-height: var(--line-height-single);
-	margin: var(--margin-single) auto;
-	max-width: 35rem;
-}
-
-figure {
-	margin: .5rem 1rem;
-}
-
-figcaption {
-	padding: 1rem;
-}
-
-.example-card {
-	background-color: white;
-	border-bottom: 1px solid var(--color-silver);
-	box-shadow: .5rem .25rem .7rem rgba( 0, 0, 0, .35 );
-	margin: 2rem auto;
-	padding: 1rem;
-}
-
-@media (min-width: 600px) {
-	
-}
 
 /*-----------------------------------------------------------------
 		 color style components
