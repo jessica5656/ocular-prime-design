@@ -16,7 +16,7 @@ html {
 	/*------
 	color
 	-------*/
-	--color-silver-transparent: rgba(147, 151, 154, .35);
+	--color-silver-transparent: rgba(147, 151, 154, .10);
 	--color-silver-dark-transparent: rgba(101, 105, 108, .35);
 	--color-silver: #93979a;
 	--color-silver-xlight: #e0e0e0;
@@ -247,7 +247,6 @@ a:active {
 
 
 .logo {
-	margin: .5rem;
 	font-size: var(--font-size-two);
 	text-transform: none;
 	
@@ -279,7 +278,7 @@ a:active {
 	}
 
 	.logo {
-		font-size: var(--font-size-four);
+		font-size: var(--font-size-three);
 	}
 
 }
@@ -412,7 +411,6 @@ figcaption {
 
 .nav-primary li {
 	border-bottom: 1px solid rgba( 0, 0, 0, .25 );
-	padding: 1rem .5rem;
 }
 
 .nav-primary .current-page {
@@ -436,7 +434,7 @@ figcaption {
 	}
 
 	.nav-primary .current-page {
-	font-size: var(--font-size-three);
+	font-size: var(--font-size-two);
 	text-shadow: 0 0 3px var(--color-gold-xlight), 0 0 5px var(--color-gold-xlight);
 	padding: .5rem;
 	}
@@ -446,7 +444,7 @@ figcaption {
 @media (min-width: 1150px) {
 
 	.nav-primary a {
-		font-size: var(--font-size-three);
+		font-size: var(--font-size-two);
 	}
 }
 
@@ -454,7 +452,12 @@ figcaption {
 		Header components
 -------------------------------------------------------------------*/
 header {
-	padding-top: 1rem;
+	background-color: white;
+	box-shadow: .5rem .25rem .7rem rgba( 0, 0, 0, .35 );
+	left: 0;
+	padding-top: .5rem;
+	position: fixed;
+	right: 0;
 }
 
 @media (min-width: 800px) {
