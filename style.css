@@ -2,25 +2,26 @@
 /*-----------------------------------------------------------------
 		variables 
 -------------------------------------------------------------------*/
-
 html {
 
-	/*------us-background: .25rem;
-	--border-color-section-seperators: #65696c;
-
+	
 	/*------
 	box-shadow
 	-------*/
 	--box-shadow-primary: .5rem .25rem .7rem rgba( 0, 0, 0, .35 );
 	--box-shadow-gold: .15rem .45rem .7rem rgba( 201, 171, 102, .55 );
+	
+	/*------
 	border
 	-------*/
 
-	--border-radi
+	--border-radius-background: .25rem;
+	--border-color-section-seperators: #65696c;
+
 	/*------
 	color
 	-------*/
-	--color-silver-transparent: rgba(147, 151, 154, .10);
+	--color-silver-transparent: rgba(147, 151, 154, .30);
 	--color-silver-dark-transparent: rgba(101, 105, 108, .35);
 	--color-silver: #93979a;
 	--color-silver-xlight: #e0e0e0;
@@ -80,7 +81,7 @@ html {
 	text-shadow
 	-------*/
 
-	--text-shadow-primary: 1px 1px rgba( 0, 0, 0, .15 );;
+	--text-shadow-primary: 2px 2px rgba( 0, 0, 0, .25 );;
 
 	/*------
 	type-scale
@@ -124,7 +125,7 @@ h1 {
 	font-size: var(--font-size-four);
 	line-height: var(--line-height-double);
 	text-align: center;
-	text-shadow: 1px 1px rgba( 0, 0, 0, .25 );
+	text-shadow: var(--text-shadow-primary);
 	
 }
 
@@ -380,6 +381,7 @@ figcaption {
 	color: var(--color-blue-dark);
 }
 
+
 /*-----------------------------------------------------------------
 		Hero components
 -------------------------------------------------------------------*/
@@ -392,6 +394,7 @@ figcaption {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
+	padding-top: 5rem;
 	max-width: 100%;
 	min-height: 50vh;	
 }
@@ -628,7 +631,7 @@ footer {
 
 .link-button-primary, .link-button-primary:visited, .link-button-primary-dark, 
 .link-button-primary-dark:visited,	.link-button-primary-light, .link-button-primary-light:visited {
-	color: var(--color-silver-dark);
+	color: var(--color-gold-light);
 	background-color: var(--color-blue);
 	border-radius: var(--border-radius-background);
 	box-shadow: .5rem .25rem .5rem rgba( 0, 0, 0, .35 );
@@ -645,6 +648,7 @@ footer {
 .link-button-primary-light, .link-button-primary-light:visited, .link-button-primary-light:hover, .link-button-light:focus {
 	background-color: var(--color-blue-light);
 }
+
 
 .link-button-primary:hover, .link-button-primary:focus, .link-button-primary-dark:hover, .link-button-primary-dark:focus, .link-button-primary-light:hover, .link-button-primary-light:focus {
 	background-color: var(--color-gold);
@@ -709,7 +713,7 @@ footer {
 }
 
 .link-button-secondary-light:hover, .link-button-secondary-light:focus {
-	color: white;
+	color: var(--color-silver-dark);
 	background-color: var(--color-gold-light);
 	border: 1px solid var(--color-gold-light);
 }
@@ -741,6 +745,10 @@ footer {
 	text-decoration: none;
 }
 
+.link-button-tertiary-light:hover {
+	color: var(--color-silver-xdark);
+}
+
 .link-button-tertiary:active {
 	background-color: var(--color-silver-gold-light);
 }
@@ -769,24 +777,28 @@ footer {
 	Button Hero
 ----------------------*/
 
-.link-button-hero {
+.link-button-hero, .link-button-hero:visited, .link-button-hero:hover, .link-button-hero:focus, .link-button-hero:active  {
 	color: var(--color-silver-xdark);
-	background-color: transparent;
-	border: 1px solid var(--color-silver-dark);
+	background-color: var(--color-gold-transparent);
+	border: 1px solid var(--color-silver);
 	border-radius: 1rem;
 	bottom: 2rem;
-	box-shadow: var(--box-shadow-gold), var(--box-shadow-primary);
-	text-shadow: var(--text-shadow-primary);
+	box-shadow: var(--box-shadow-primary);
 }
 
-	.link-button-hero:hover {
-		background-color: var(--color-gold-transparent);
-		border: 1px solid var(--color-gold);
-		color: var(--color-blue-dark);
-	}
+
+.link-button-hero:hover, .link-button-hero:focus {
+	background-color: var(--color-silver-transparent);
+	border: 1px solid var(--color-gold);
+	box-shadow: var(--box-shadow-gold);
+	color: var(--color-blue-dark);
+}
+
+.link-button-hero:active {
+	color: var(--color-blue);
+}
 
 @media (min-width: 800px) {
-
 
 	.link-button-hero {
 		font-size: var(--font-size-three);
@@ -794,6 +806,21 @@ footer {
 	}
 
 }
+
+
+
+/*----------------------
+	Button Card
+----------------------*/
+.link-button-card {
+	box-shadow: var(--box-shadow-gold);
+	font-size: var(--font-size-one);
+	margin: 1rem .25rem 1rem .25rem;
+	max-width: 5rem;
+	padding: 0rem 1rem;
+}
+
+
 /*------------------------------------------------------------------
 		Accordion Components
 --------------------------------------------------------------------*/
@@ -1161,6 +1188,184 @@ form {
 
 .success {
 	border-top: .5rem solid var(--color-green);
+}
+
+
+/*-----------------------------------------------------------------
+		Card Components
+-------------------------------------------------------------------*/
+
+.card {
+	align-items: center;
+	box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	font-size: var(--font-size-two);
+	justify-content: center;
+	margin: 2rem auto;
+	max-height: 35rem;
+	max-width: 35rem;
+	min-height: 18rem;
+	min-width: 18rem;	
+	text-align: center;
+	transition: 0.4s;
+	
+}
+
+.container-link-button {
+	display: inline-block;
+}
+
+/*----------------------
+	Article Card
+----------------------*/
+.card-article h1 {
+	font-size: var(--font-size-two);
+	padding-bottom: 0;
+}
+
+.card-article {
+	display: flex;
+	max-width: 40rem;
+}
+
+.card-article p {
+	margin-top: 0;
+	max-width: 20rem;
+}
+
+.card-article-content {
+	align-items: center;
+	border: 1px solid var(--color-gold-dark);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: 2rem;
+	padding: .5rem 3rem;
+	
+}
+
+@media ( min-width: 775px ) { 
+	.card-article-content {
+		margin: 1rem 3rem;
+		max-width: 35rem;
+		padding: 1rem 5rem;
+	}
+}
+/*----------------------
+	Call to Action Card
+----------------------*/
+.card-action {
+	background-image: url(img/galaxy.png);
+	background-position: center;
+	background-size: cover;
+	border-radius: 3rem;
+	color: var(--color-blue);
+	max-height: 18rem;
+	max-width: 18rem;
+	
+}
+
+.card-action p {
+	color: var(--color-blue-dark);
+	font-size: var(--font-size-three);
+	margin: 0;
+	max-width: 8rem;
+	padding: .5rem;
+}
+
+.card-action img {
+	height: 15%;
+	width: 15%;
+}
+
+.card-action:hover {
+	box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22);
+	transform: scale(0.9, 0.9);
+ 
+}
+
+
+/*----------------------
+	Profile Card
+----------------------*/
+
+
+.profile img {
+	border: 5px solid #fff;
+	border-radius: 50%;
+	margin: 1rem auto;
+	max-width: 12rem;
+}
+
+.profile-bio img {
+	margin: 0 auto;
+	max-width: 8vw;
+}
+
+.profile {
+	background: url(img/woman-headset.png);
+	background-repeat: no-repeat;
+  	background-size: cover;
+	border-bottom: 1px solid var(--color-gold);
+	border-radius: 50%;
+	border-top: 1px solid var(--color-gold);
+	box-shadow: 0 0 6rem .5rem var(--color-silver);
+	display: block;
+	max-height: 16rem;
+	max-width: 16rem;
+ 	overflow: hidden;
+	text-align: center;
+	transition: all ease 0.25s;
+}
+
+.profile:hover {
+	border-bottom: 4px solid var(--color-gold);
+	border-radius: 5px;
+	border-top: 4px solid var(--color-gold);
+	box-shadow: 0 0 70px 10px white;
+	max-height: 30rem;
+	max-width: 22rem;
+  
+}
+
+.profile-bio h1 {
+	border-bottom: 0px solid white;
+	border-top: 0px solid white;
+	color: white;
+	display: inline-block;
+	font-size: 1rem;
+	margin: 0 auto;
+	padding: .75rem;
+	position: relative;
+	text-align: center;
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+	text-transform: uppercase;
+	
+}
+
+
+.profile-bio h2 {
+	color: white;
+	font-size: var(--font-size-one);
+	font-weight: normal;
+	margin: 0;
+	text-align: center;
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.profile-bio {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.42) 49%, rgba(0, 0, 0, 0.61) 100%);
+	color: white;
+	opacity: 0;
+	padding: 1rem;
+	transition: all linear 1.5s; 
+  
+}
+
+.profile:hover .profile-bio {
+	opacity: 1;
 }
 
 
