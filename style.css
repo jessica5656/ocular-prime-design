@@ -189,7 +189,6 @@ h6 {
 	font-size: var(--font-size-two);
 	letter-spacing: 2px;
 	line-height: var(--line-height-single);
-	padding: 1rem;
 	text-align: center;
 	text-shadow: 1px 1px rgba( 0, 0, 0, .25 );
 }
@@ -597,8 +596,14 @@ header {
 
 footer {
 	color: var(--color-dark-blue);
+	
+}
+
+
+.footer-creation-copyrite {
 	font-size: var(--font-size-one);
 }
+
 
 /*-----------------------------------------------------------------
 		 color style components
@@ -991,10 +996,15 @@ input:focus, textarea:focus, select:focus {
 	box-shadow: .5rem .25rem .7rem rgba( 0, 0, 0, .25 );
 	color: var(--color-gold-xlight);
 	font-size: var(--font-size-one);
-	grid-column: span 2;
-	margin: .5rem auto;
+	margin: .5rem;
+	max-width: 8rem;
 	padding: .75rem 2rem;
 
+}
+
+form [type="submit"] {
+	margin: 1rem auto;
+	grid-column: span 2;
 }
 
 [type="submit"]:hover, [type="submit"]:focus, button:hover, button:focus {
@@ -1024,6 +1034,8 @@ input:focus, textarea:focus, select:focus {
 textarea {
 	box-sizing: border-box;
 	border-radius: var(--border-radius-background);
+	min-height: 10rem;
+	min-width: 20rem;
 }
 
 @media ( min-width: 650px ) {
@@ -1050,9 +1062,7 @@ textarea {
 		margin: auto;
 		grid-column: span 2;
 	}
-
 }
-
 
 /*-----------------------------------------------------------------
 		notification
@@ -1065,8 +1075,8 @@ textarea {
 	box-shadow: .5rem .25rem .7rem rgba( 0, 0, 0, .35 );
 	display: flex;
 	justify-content: space-between;
-	min-height: 10vh;
-	min-width: 20vw;
+	min-height: 10%;
+	min-width: 20%;
 	padding: 0;
 }
 
@@ -1081,8 +1091,8 @@ textarea {
 .notification img {
 	background-color: var(--color-silver-transparent);
 	margin: 0;
-	max-height: 10vh;
-	max-width: 10vw;
+	max-height: 10%;
+	max-width: 10%;
 	padding: 1rem;
 }
 
@@ -1138,43 +1148,38 @@ textarea {
 -------------------------------------------------------------------*/
 
 .card {
-	align-items: center;
+	border-radius: var(--border-radius-background);
 	box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
 	cursor: pointer;
-	display: flex;
-	flex-direction: column;
 	font-size: var(--font-size-two);
 	justify-content: center;
 	margin: 2rem auto;
-	max-height: 35rem;
-	max-width: 35rem;
+	padding: 1.5rem;
+	max-width: 45rem;
 	min-height: 18rem;
 	min-width: 18rem;	
-	text-align: center;
-	transition: 0.4s;
-	
 }
 
-.container-link-button {
-	display: inline-block;
-}
 
 /*----------------------
 	Article Card
 ----------------------*/
 .card-article h1 {
-	font-size: var(--font-size-two);
-	padding-bottom: 0;
+	font-size: var(--font-size-four);
+	margin-left: 3rem;
+	text-align: left;
+	text-shadow: none;
 }
 
 .card-article {
-	display: flex;
-	max-width: 40rem;
+	display: block;
+	
 }
 
-.card-article p {
+.card-article-content p {
+	border-top: 1px solid var(--color-silver);
 	margin-top: 0;
-	max-width: 20rem;
+	padding-top: 1rem;
 }
 
 .card-article-content {
@@ -1183,27 +1188,55 @@ textarea {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	margin: 2rem;
-	padding: .5rem 3rem;
+	margin-top: 2rem;
+	padding: 1rem 3rem;
+
+}
+
+.card-article img {
+	margin-bottom: 1rem;
+}
+
+.article-text p {
+	text-align: left;
+	max-width: 35rem;
+}
+
+
+.card-article p:last-child{
+	border-top: none;
 	
+}
+
+.footer-article {
+	font-size: .75rem;
+	padding: 0 0 0 2rem;
+	text-align: left;
+}
+
+.footer-article p {
+	margin: .5rem 1rem .5rem 1rem;
 }
 
 @media ( min-width: 775px ) { 
 	.card-article-content {
 		margin: 1rem 3rem;
 		max-width: 35rem;
-		padding: 1rem 5rem;
+		padding: 1rem 7rem;
 	}
 }
 /*----------------------
 	Call to Action Card
 ----------------------*/
 .card-action {
+	align-items: center;
 	background-image: url(img/galaxy.png);
 	background-position: center;
 	background-size: cover;
 	border-radius: 3rem;
 	color: var(--color-blue);
+	display: flex;
+	flex-direction: column;
 	max-height: 18rem;
 	max-width: 18rem;
 	
@@ -1218,8 +1251,8 @@ textarea {
 }
 
 .card-action img {
-	height: 15%;
-	width: 15%;
+	height: 10%;
+	width: 10%;
 }
 
 .card-action:hover {
@@ -1228,7 +1261,10 @@ textarea {
  
 }
 
-
+.container-link-button {
+	display: inline-block;
+	text-align: center;	
+}
 /*----------------------
 	Profile Card
 ----------------------*/
@@ -1259,7 +1295,7 @@ textarea {
 	max-width: 16rem;
  	overflow: hidden;
 	text-align: center;
-	transition: all ease 0.25s;
+	transition: all ease 0.5s;
 }
 
 .profile:hover {
@@ -1311,5 +1347,48 @@ textarea {
 }
 
 
+/*----------------------
+	Product Card
+----------------------*/
 
+.card-product {
+	display: flex;
+	flex-direction: column;
+}
+
+.card-product h1 {
+	border-bottom: 1px solid var(--color-gold-dark);
+	font-size: var(--font-size-three);
+	text-align: left;
+}
+
+.card-product-content {
+	display: flex;
+	max-width: 35rem;
+	flex-direction: row;
+}
+
+.card-product-content ul {
+	
+}
+
+.card-product-content .callout {
+	background-image: url(img/vr-headset.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	border: 1px solid var(--color-gold-dark);
+	margin: 1rem 0;
+	min-height: 25%;
+	min-width: 25%;
+
+}
+
+.card-product a {
+	font-size: var(--font-size-one);
+	max-height: 2rem;
+	max-width: 5rem;
+	position: relative;
+	text-align: center;
+	right: -31rem;
+}
 

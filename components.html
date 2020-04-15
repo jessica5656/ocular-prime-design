@@ -111,10 +111,6 @@
 				<figcaption>Light</figcaption>
 			</figure>
 		</div>
-		<div class="example-card">
-			<h3>Social Media Button</h3>
-			<button class="dropbtn"></button>
-		</div>
 
 		<h2>Accordion Components</h2>
 
@@ -160,7 +156,7 @@
 
 		<div class="example-card">
 			<figure>
-				<button id="open-dialog" type="button">Open Dialog</button>
+				<button id="open-dialog" type="button">Open</button>
 
 				<dialog id="modal-demo">
 
@@ -439,33 +435,41 @@
 		<h2>Information Card</h2>
 
 		<div class="example-card">
-			<aside class="card card-article">
+			<h3>Article Card</h3>
+			<section class="card card-article">
+				<h1>Is Virtual Reality really worth it?</h1>
 				<div class="card-article-content">
-
+			
 					<img src="img/man-headset.jpg">
 
-				
-					<h1>Join us and go beyond...</h1>
+					<p class="text-featured">Join us and go beyond...</p>
 
-					<div class="text-tertiary">
+					<div class="article-text text-tertiary">
 
 						<p>Our portals will transport you to different dimensions. You travel still on your own feet but deeper in your mind than you've dared to venture. With each step the excitment only intensifies. Here you can travel for an eternity searching for the light lost many years ago. Let the adventurer that lives in your heart finally give into the dreams your childhood long ago forgot.</p>
+
+						<p>Our powerful headsets lead the charge. The short answer is that VR is worth it. With some of the visual adventures of this generation, innovative controls, and a well-supported ecosystem of VR development,  the virtual world is taking shapes you have never dreamed.</p>
 						
 					</div>
 				</div>
-			</aside>
+
+				<footer class="footer-article">
+							<p>Published January 7, 2020</p>
+
+							<p>Written by Jess Murray, Vision Designer</p>
+				</footer>
+
+			</section>
 			
 		</div>
 
 		<div class="example-card">
-			<aside>
+			<section>
 				<h3>Call to action Card</h3>
 
 				<div class="card card-action">
 		  	
 			    	<p class="text-featured">Join the Adventure!</p>
-
-			    	<img src="img/arrow.png">
 
 			    	<div class="container-link-button">
 
@@ -474,13 +478,13 @@
 				    	<a href="" class="link-button-card link-button-tertiary-light">Existing Account</a>
 			    	</div>
 				</div>
-			</aside>
+			</section>
 		</div>
 
 		<div class="example-card">
 			<h3>Profile Card</h3>
 			
-			<aside class="card profile">
+			<section class="card profile">
   	
 				<div class="profile-bio">
 					<img src="img/profile-woman.png">
@@ -489,13 +493,39 @@
 
 					<h2>Ocular Jedi Master</h2>
 
-					<p class="text-tertiary">Adventure, problem solver, and designer for Beyond Vision. Striving to push the boundary of creative production in the emerging field of virtual reality in an independent, experimental and design driven environment. </p>
+					<p class="text-tertiary">Adventure, problem solver, and designer for Beyond Vision.</p>
 
+					<ul>
+						<li>inyoursight@beyond.vision.com</li>
+						<li>(512)555-5555</li>
+					</ul>
 				</div>
 
-			</aside>
+			</section>
 		</div>
 
+		<div class="example-card">
+			<h3>Product Card</h3>
+
+			<section class="card card-product">
+
+				<h1>What's in the box?</h1>
+				<div class="card-product-content">
+					<div class="callout"></div>
+					
+					<ul class="text-tertiary">
+						<li>1. Headset- A soft, comfortable headset with custom optics provide incredible visual fidelity and a wide field of view.</li>
+
+						<li>2. Touch controllers- Touch is a pair of tracked controllers that provide intuitive hand presence in VR—the feeling that your virtual hands are actually your own.</li>
+
+						<li>3. Two Sensors- Prime sensors track constellations of IR LEDs to translate your movement into VR whether you’re sitting down or standing up.</li>
+					</ul>
+					
+				</div>
+				<a href="" class="link-button-tertiary-dark">Buy Now</a>
+
+			</section>
+		</div>
 
 	
 
@@ -529,8 +559,8 @@
 					</ul>
 				</nav>
 			
-				<div>
-					<p class="footer-creation-copyrite">Ocular Prime Deisgn&copy;2020</p>
+				<div class="footer-creation-copyrite">
+					<p>Ocular Prime Deisgn&copy;2020<p>
 
 					<p>Created by Jess Murray, a local Austin UX design student at ACC.</p>
 				</div>
