@@ -2,128 +2,138 @@
 
 <h1>Explore Another Deminsion</h1>
 
-<div class="example-card information-card">
-			<article>
 
-				<h1>Join us and go beyond...</h1>
+<h1>Join us and go beyond...</h1>
 
-				<img src="img/galaxy.png">
+				
 
-				<div class="font-secondary information-card-content">
-
-					<p>You are hearby cordially invited to join us for our open house with guest speakers to ignight your mind and a chance to take your own miniature adventure. Come see for yourself through Beyond Vision's eyes. </p>
-				</div>
-
+<p>You are hearby cordially invited to join us for our open house with guest speakers to ignight your mind and a chance to take your own miniature adventure. Come see for yourself through Beyond Vision's eyes. </p>
+			
 					<ul class="text-tertiary">
 						<li>Friday August 21, 2020</li>
 						<li>2345 Visionary Blvd.</li>
 						<li>Austin, Tx 78703</li>
 					</ul>
 				
-			
-			</article>
-			
+<div class="news-tile-wrap">
+			<h1>In the News</h1>
+			<img src="img/vr-explode/12-4x3/vr-explode-1x1.png" alt="vr explosion" class="hero-tile-1x1">
+			<img src="img/vr-explode/12-4x3/vr-explode-1x2.png" alt="vr explosion" class="news-tile-1x2">
+			<img src="img/vr-explode/12-4x3/vr-explode-1x3.png" alt="vr explosion" class="news-tile-1x3">
+			<img src="img/vr-explode/12-4x3/vr-explode-1x4.png" alt="vr explosion" class="news-tile-1x4">
+			<img src="img/vr-explode/12-4x3/vr-explode-2x1.png" alt="vr explosion" class="news-tile-2x1">
+			<img src="img/vr-explode/12-4x3/vr-explode-2x2.png" alt="vr explosion" class="news-tile-2x2">
+			<img src="img/vr-explode/12-4x3/vr-explode-2x3.png" alt="vr explosion" class="news-tile-2x3">
+			<img src="img/vr-explode/12-4x3/vr-explode-2x4.png" alt="vr explosion" class="news-tile-2x4">
+			<img src="img/vr-explode/12-4x3/vr-explode-3x1.png" alt="vr explosion" class="news-tile-3x1">
+			<img src="img/vr-explode/12-4x3/vr-explode-3x2.png" alt="vr explosion" class="news-tile-3x2">
+			<img src="img/vr-explode/12-4x3/vr-explode-3x3.png" alt="vr explosion" class="news-tile-3x3">
+			<img src="img/vr-explode/12-4x3/vr-explode-3x4.png" alt="vr explosion" class="news-tile-3x4">
+		
 		</div>
 
-		.information-card {
-	align-items: center;
-	background-color: var(--color-silver-xdark);
-	color: var(--color-gold);
-	display: flex;
-	height: 100vh;
-	justify-content: center;
-	padding: 0;
-}
-
-.information-card-content {
-	padding: 0 1rem;
-	position: relative;
-}
-
-.information-card-content ul {
-	bottom: 0rem;
-	position: absolute;
-	right: 0rem;
-}
-
-.information-card h1, .information-card h2 {
-	color: var(--color-gold);
-}
-
-.information-card h1 {
-	padding: 1rem;
-}
-
-.information-card img {
-	box-shadow: var(--box-shadow-primary);
-	display: block;
-	margin: 0;
-	max-width: 100%;	
-}
-
-
-/*-----------------------------------------------------------------
-.nav-secondary ul {
-	background-color: var(--color-gold-light);
-	border-radius: var(--border-radius-background);
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	list-style: none;
-	max-width: 8rem;
-	min-width: 5rem;
-	padding-left: 0;
-}
-
-.nav-secondary li {
-	color: var(--silver-xlight);
-}
-
-.nav-secondary a {
-	color: var(--color-blue-dark);
-	display: block;
-	font-size: var(--font-size-one);
-	padding: .75rem 1rem;
-	text-decoration: none;	
-}
-
-.nav-secondary a:hover {
-	background-color: var(--color-silver-transparent);
-	color: var(--color-blue);
-	text-decoration: none;
-}
-
-
-.dropbtn {
-	background-color: var(--color-blue-dark);
-	background-image: url(img/social-media.png);
-	background-size: contain;
-	background-position: center;
-	border-radius: 50%;
-	color: white;
-	padding: 1rem;
-	width: 2rem;
-	height: 2rem;
-	font-size: var(--font-size-one);
-  
-}
-
-.dropdown {
-	position: relative;
-	display: inline-block;
-}
-
-.dropdown-content {
-	display: none;
-	position: absolute;
-	top: -11rem;
-	right: -1rem;
-	
-}
-
-.dropdown:hover .dropdown-content {
-	display: block;
-}
-
-.dropdown:hover .dropbtn {
-	background-color: var(--color-gold-light);
-}
+		/*-----------------------------------------------------------------
+		News Tile Image component
 -------------------------------------------------------------------*/
+
+.news-tile-wrap {
+	background-color: var(--color-blue-xdark);
+	display: grid;
+	grid-gap: 0;
+	grid-template-columns: repeat( 4, 1fr);
+	grid-template-rows: repeat( 3, 1fr);
+}
+
+.news-tile-wrap h1 {
+	grid-column: 1/ span 4;
+	position: absolute;
+	font-size: var(--font-size-ten);
+	top: 5rem;
+	left: 2rem;
+}
+
+.news-tile-wrap img:hover {
+  animation: shake-blink .5s ease-out;
+  animation-iteration-count: 5;
+
+}
+
+.news-tile-wrap img:active {
+  animation: off-right .3s ease-out;
+  animation-iteration-count: 1;
+}
+
+
+@keyframes shake-blink {
+
+	10% {
+	transform: translate(1px, -2px) scale(.09 .09) rotate(1.5deg);
+	opacity: .95%;
+	}
+
+	20% {
+	transform: translate(-4px, 5px) rotate(-.5deg);
+	opacity: .8;
+	}
+
+	30% {
+	transform: translate(4px, -2px) rotate(-1.5deg);
+	opacity: .62;
+	}
+
+	40% {
+    transform: translate(-1px, 2px) rotate(-1.5deg);
+    opacity: .97;
+  }
+
+  	50% {
+  	transform: translate(5px, 0) rotate(1.5deg);
+    opacity: .97;	
+  	}
+
+  	60% {
+  	transform: translate(2px, -4px) rotate(1.5deg);
+    opacity: .24;	
+  	}
+
+  	70% {
+  	transform: translate(-3px, 3px) scale(.09 .09) rotate(1.5deg);
+    opacity: .24;	
+  	}
+
+ 	80% {
+  	transform: translate(2px, -2px) rotate(-.5deg);
+    opacity: .03;	
+  	}
+
+ 	90% {
+  	transform: translate(2px, -4px) rotate(-.5deg);
+    opacity: .05;	
+  	}
+
+  	0%, 100% {
+  		transform: translate(0,0) scale(1) rotate(0);
+  		opacity: 1;
+  	}
+}
+
+	.card-article img {
+	 	display: none;
+	 }
+
+	.card-block {
+		display: block;
+		background-image: url(img/profile-woman.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		min-width: 30%;
+		max-width: 50vw;
+		max-height: 100vh;
+		
+	}
+
+	.article-card-block {
+		background-image: url(img/bullet-head-mark3.500.png);
+	}
+}
